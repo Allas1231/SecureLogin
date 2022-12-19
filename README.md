@@ -1,7 +1,5 @@
-# SecureLogin
-Multifactor Authentication Using QR code and Username/Password
-
-In this project I'm going to build secure login system with database for clients.I performed two major task in this project that are multifactor authentication and encrption of user password. first create new database and fill it with data like username and password
+# Secure Multifactor Login System
+In this project I'm going to build secure login system with database for clients. I performed two major task in this project that are multifactor authentication and encrptionof user password. First create new database and fill it with data like username and password
 then create server script and coonect it to the database and write client script which is use to send request to the server and server check the availibilty of username and password from the database and then server give access to the client login or not to reduce the major vulnerabilities.
 
 
@@ -40,7 +38,6 @@ CREATE TABLE IF NOT EXISTS userdata (
     password VARCHAR(255) NOT NULL
 )
 """)
-username1, password1 = "nuralnine", hashlib.sha256("nuralpassword".encode()).hexdigest()
 username2, password2 = "Fatima", hashlib.sha256("fatma0123".encode()).hexdigest()
 username3, password3 = "Fatmaa", hashlib.sha256("fatma1023".encode()).hexdigest()
 username4, password4 = "Fatmah", hashlib.sha256("fatma1203".encode()).hexdigest()
@@ -100,7 +97,8 @@ print(client.recv(1024).decode())
 ```
 
 ## QR code authentication
-add QR code authenticationto make online system more secure
+How to run?
+Run the code to generate the QR code for google authentication. once code generated scane the code it will automatically create autheticated account for the user. After scannig code it will generate the otp for frequently use of account. Add QR code authenticationto make online system more secure. 
 ```bash
 import time
 import pyotp
@@ -124,7 +122,7 @@ class authenticator:
 ## Output
 
 ![Capture1](https://user-images.githubusercontent.com/63055500/208398813-5d51a088-edfe-43c5-abf2-32e3f716c052.PNG)
-![Capture2](https://user-images.githubusercontent.com/63055500/208398899-ec22b0ef-fc63-4703-8712-0d10713870cb.PNG)
+
 
 
 ![Capture3](https://user-images.githubusercontent.com/63055500/208400551-96e019a3-999a-46bd-ab82-8876c92e5360.PNG)
