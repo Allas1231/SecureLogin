@@ -17,7 +17,7 @@ then create server script and coonect it to the database and write client script
 Liberaries which are use in this project
 
 ```bash
-  import sqlite3
+import sqlite3
   
 ```
 This library is use to create database tables colums and manage qurries and manage SQLite databse file
