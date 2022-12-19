@@ -23,14 +23,14 @@ Liberaries which are use in this project
 This library is use to create database tables colums and manage qurries and manage SQLite databse file
 
 ```bash
-  import hashlib
+import hashlib
   
 ```
 ## Create Sample database
 create database and store username and password into the database
 
 ```bash
-  conn = sqlite3.connect("userdata.db")
+conn = sqlite3.connect("userdata.db")
 cur = conn.cursor()
 
 cur.execute("""
@@ -56,7 +56,7 @@ conn.commit()
 In this section create server and connect it to the databse  
 
 ```bash
-     password = c.recv(1024)
+    password = c.recv(1024)
     password = hashlib.sha256(password).hexdigest()
 
     conn = sqlite3.connect("userdata.db")
@@ -86,7 +86,7 @@ while True:
 Create client side script and connect it to the database
 
 ```bash
-  import socket
+import socket
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect(("localhost", 9999))
@@ -102,7 +102,7 @@ print(client.recv(1024).decode())
 ## QR code authentication
 add QR code authenticationto make online system more secure
 ```bash
-  import time
+import time
 import pyotp
 import qrcode
 
